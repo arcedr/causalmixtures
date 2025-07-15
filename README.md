@@ -82,16 +82,3 @@ guide](https://zc2326.github.io/causalbkmr/articles/MI_BKMR.html) for
 [website](https://zc2326.github.io/causalbkmr/articles/BKMRMI_method_overview.html)
 for an overview of statistical modeling approaches.
 
-### g-BKMR
-
-Exposure to environmental chemicals has been shown to rewire development
-affecting later health status. Quantifying the joint effect of
-environmental mixtures over time is crucial to determine intervention
-timing. However, causal interpretation of longitudinal environmental
-mixture studies encounters challenges. There is no statistical approach
-that allows simultaneously for time-varying confounding, flexible
-modeling, and variable selection when examining the effect of multiple,
-correlated, and time-varying exposures. To address these gaps, we
-develop a causal inference method, g-BKMR, which enables us to estimate
-nonlinear, non-additive effects of time-varying exposures and
-time-varying confounders, while also allowing for variable selection.
