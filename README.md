@@ -3,11 +3,6 @@
 
 # causalbkmr: a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)
 
-<!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.com/zc2326/causalbkmr.svg?branch=master)](https://travis-ci.com/zc2326/causalbkmr)
-<!-- badges: end -->
 
 ## About the Package
 
