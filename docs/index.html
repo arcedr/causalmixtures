@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Causal Inference with Bayesian kernel machine regression • causalbkmr</title>
+<title>Causal Inference with Bayesian kernel machine regression • causalmixtures</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">causalbkmr</a>
+        <a class="navbar-link" href="index.html">causalmixtures</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
@@ -87,19 +87,6 @@
     </li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    g-BKMR
-
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="articles/gBKMR_method_overview.html">Overview of Methodology</a>
-    </li>
-    <li class="dropdown-header">Quick Start</li>
-  </ul>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -110,7 +97,7 @@
   </a>
 </li>
 <li>
-  <a href="https://github.com/zc2326/causalbkmr" class="external-link">
+  <a href="https://arcedr.github.io/causalmixtures/">
     <span class="fa fa-github fa-lg"></span>
 
     Github
@@ -129,23 +116,23 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="causalbkmr-a-suite-of-functions-for-causal-bayesian-kernel-machine-regression-causal-bkmr">causalbkmr: a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)<a class="anchor" aria-label="anchor" href="#causalbkmr-a-suite-of-functions-for-causal-bayesian-kernel-machine-regression-causal-bkmr"></a>
+<div class="page-header"><h1 id="causalmixtures-a-suite-of-functions-for-causal-bayesian-kernel-machine-regression-causal-bkmr">causalmixtures: a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)<a class="anchor" aria-label="anchor" href="#causalmixtures-a-suite-of-functions-for-causal-bayesian-kernel-machine-regression-causal-bkmr"></a>
 </h1></div>
 <div class="section level2">
 <h2 id="about-the-package">About the Package<a class="anchor" aria-label="anchor" href="#about-the-package"></a>
 </h2>
-<p>The R package <code>causalbkmr</code> consists of three parts: <code>BKMR-CMA</code> for Bayesian Kernel Machine Regression-Causal Mediation Analysis, <code>MI-BKMR</code> for Multiple Imputation BKMR, and <code>g-BKMR</code> for Bayesian Kernel Machine Regression for time-varying exposures and time-varying confounders.</p>
-<p>We welcome your feedback and questions (email <a href="mailto:zc2326@columbia.edu" class="email">zc2326@columbia.edu</a>)!</p>
+<p>The R package <code>causalmixtures</code> consists of three parts: <code>BKMR-CMA</code> for Bayesian Kernel Machine Regression-Causal Mediation Analysis, and <code>MI-BKMR</code> for Multiple Imputation BKMR.</p>
+<p>We welcome your feedback and questions (email <a href="mailto:ad3531@cumc.columbia.edu" class="email">ad3531@cumc.columbia.edu</a>)!</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the latest version of <code>causalbkmr</code> via:</p>
+<p>You can install the latest version of <code>causalmixtures</code> via:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"zc2326/causalbkmr"</span><span class="op">)</span></span></code></pre></div>
-<p>Load <code>causalbkmr</code>:</p>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"arcedr/causalmixtures"</span><span class="op">)</span></span></code></pre></div>
+<p>Load <code>causalmixtures</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/zc2326/causalbkmr" class="external-link">causalbkmr</a></span><span class="op">)</span> </span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/zc2326/causalbkmr" class="external-link">causalmixtures</a></span><span class="op">)</span> </span></code></pre></div>
 <div class="section level3">
 <h3 id="bkmr-cma">BKMR-CMA<a class="anchor" aria-label="anchor" href="#bkmr-cma"></a>
 </h3>
@@ -153,14 +140,14 @@
 <p>We use BKMR for the mediator and outcome regression models since BKMR allows for all possible nonlinearities and interactions among the elements included in the kernel with the specified outcome, without a prior specification, and credible intervals a BKMR fit inherently control for multiple testing due to the Bayesian nature of the model and the prior specification.</p>
 <p>We predict counterfactuals using the posterior predictive distributions of the mediator and the outcome and present an algorithm for estimation of mediation effects. We also conduct a simulation study to compare how our approach performs relative to current mediation methods that assume a restrictive linear relationship between the exposure, mediator, and outcome.</p>
 <p>Cite the paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sim.9255?casa_token=lf0hlEtqtjgAAAAA%3AyPLEllmuJGIeEN9ZMIr7kT33RjXQmjiLbUq4JjqfI5dxlSvkdeVjzkEiOqG9Rbh70Frxe3ONzA2aql8" class="external-link">Bayesian kernel machine regression-causal mediation analysis</a></p>
-<p>See the <a href="https://zc2326.github.io/causalbkmr/articles/BKMRCMA_QuickStart.html">Quick Start guide</a> for <code>BKMR-CMA</code>. See the package <a href="https://zc2326.github.io/causalbkmr/articles/BKMRCMA_method_overview.html">website</a> for an overview of statistical modeling approaches.</p>
+<p>See the <a href="https://zc2326.github.io/causalbkmr/articles/BKMRCMA_QuickStart.html" class="external-link">Quick Start guide</a> for <code>BKMR-CMA</code>. See the package <a href="https://zc2326.github.io/causalbkmr/articles/BKMRCMA_method_overview.html" class="external-link">website</a> for an overview of statistical modeling approaches.</p>
 </div>
 <div class="section level3">
 <h3 id="bkmr-mi">BKMR-MI<a class="anchor" aria-label="anchor" href="#bkmr-mi"></a>
 </h3>
 <p>A command that is used for valid estimation of environmental mixture effects and evaluation of uncertainty in the presence of missing data, which are imputed using multiple imputation techniques. The commands combine information from multiple Bayesian kernel machine regression (BKMR) models fit using the bkmr R package (Bobb et al. 2015, Valeri et al. 2017, Bobb et al. 2018, Anglen Bauer et al. 2019). The commands also produce effective visualizations of the estimated causal effects and dose-response relationships. The package contains functions to be used with BKMR MI fits to create a data frame for plotting with <code>ggplot</code>.</p>
 <p>The data <code>BKMRfits10</code> is simulated data with 10 BKMRfits, each is a BKMR fit using multiple imputed data with size <em>n</em> = 500.</p>
-<p>See the <a href="https://zc2326.github.io/causalbkmr/articles/MI_BKMR.html">Quick Start guide</a> for <code>BKMR-CMA</code>. See the package <a href="https://zc2326.github.io/causalbkmr/articles/BKMRMI_method_overview.html">website</a> for an overview of statistical modeling approaches.</p>
+<p>See the <a href="https://zc2326.github.io/causalbkmr/articles/MI_BKMR.html" class="external-link">Quick Start guide</a> for <code>BKMR-CMA</code>. See the package <a href="https://zc2326.github.io/causalbkmr/articles/BKMRMI_method_overview.html" class="external-link">website</a> for an overview of statistical modeling approaches.</p>
 </div>
 </div>
 </div>
@@ -187,15 +174,16 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing causalbkmr</a></li>
+<li><a href="authors.html#citation">Citing causalmixtures</a></li>
 </ul>
 </div>
 
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Zilan Chai <br><small class="roles"> Author, maintainer </small>   </li>
+<li>Zilan Chai <br><small class="roles"> Author </small>   </li>
 <li>Katrina Devick <br><small class="roles"> Author </small>   </li>
+<li>Arce Domingo <br><small class="roles"> Author, maintainer </small>   </li>
 <li>
 <a href="https://www.lindavaleri.com/" class="external-link">Linda Valeri</a> <br><small class="roles"> Author </small>   </li>
 </ul>
@@ -209,7 +197,7 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by Zilan Chai, Katrina Devick, <a href="https://www.lindavaleri.com/" class="external-link">Linda Valeri</a>.</p>
+<p>Developed by Zilan Chai, Katrina Devick, Arce Domingo, <a href="https://www.lindavaleri.com/" class="external-link">Linda Valeri</a>.</p>
 </div>
 
 <div class="pkgdown">

@@ -1,30 +1,29 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# causalbkmr: a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)
+# causalmixtures: a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)
 
 
 ## About the Package
 
-The R package `causalbkmr` consists of three parts: `BKMR-CMA` for
-Bayesian Kernel Machine Regression-Causal Mediation Analysis, `MI-BKMR`
-for Multiple Imputation BKMR, and `g-BKMR` for Bayesian Kernel Machine
-Regression for time-varying exposures and time-varying confounders.
+The R package `causalmixtures` consists of three parts: `BKMR-CMA` for
+Bayesian Kernel Machine Regression-Causal Mediation Analysis, and `MI-BKMR`
+for Multiple Imputation BKMR.
 
-We welcome your feedback and questions (email <zc2326@columbia.edu>)!
+We welcome your feedback and questions (email <ad3531@cumc.columbia.edu>)!
 
 ## Installation
 
-You can install the latest version of `causalbkmr` via:
+You can install the latest version of `causalmixtures` via:
 
 ``` r
-devtools::install_github("zc2326/causalbkmr")
+devtools::install_github("arcedr/causalmixtures")
 ```
 
-Load `causalbkmr`:
+Load `causalmixtures`:
 
 ``` r
-library(causalbkmr) 
+library(causalmixtures) 
 ```
 
 ### BKMR-CMA

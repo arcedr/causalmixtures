@@ -189,7 +189,7 @@ ggplot(plotdf, aes(Effect, mean, ymin = lower, ymax = upper ))  +
 
 ## Summary statistics of the predictor-response function
 
-### Risk Summary For Totel Effect
+### Risk Summary For Total Effect
 
 ```{r TERisk, warning=FALSE,dpi = 300}
 riskSummary10 = TERiskSummaries.CMA(fit.TE = fit.y.TE, e.y=e.y10, e.y.name = "E.Y", sel=sel)
@@ -224,7 +224,7 @@ CDEriskSummary10 = CDERiskSummaries.CMA(fit.y = fit.y, e.y = e.y10, e.y.name = "
 ```{r dpi = 300}
 ggplot(CDEriskSummary10, aes(quantile, est, ymin = est - 1.96*sd, 
                              ymax = est + 1.96*sd, col = m)) + 
-  geom_pointrange(position = position_dodge(width = 0.75))
+  geom_pointrange(position = position_dodge(width = 0.75)) + theme(axis.text = element_text(size = 5))
 ```
 
 ```{r CDErisk90, warning=FALSE, message=FALSE, results='hide'} 
@@ -234,7 +234,7 @@ CDEriskSummary90 = CDERiskSummaries.CMA(fit.y = fit.y, e.y = e.y90, e.y.name = "
 ```{r dpi = 300}
 ggplot(CDEriskSummary90, aes(quantile, est, ymin = est - 1.96*sd, 
                              ymax = est + 1.96*sd, col = m)) + 
-  geom_pointrange(position = position_dodge(width = 0.75))
+  geom_pointrange(position = position_dodge(width = 0.75)) + theme(axis.text = element_text(size = 5))
 ```
 
 Since there's no effect modification, the two above figures are similar. 

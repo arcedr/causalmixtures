@@ -190,7 +190,7 @@ ggplot(plotdf, aes(Effect, mean, ymin = lower, ymax = upper ))  +
 
 ## Summary statistics of the predictor-response function
 
-### Risk Summary For Totel Effect
+### Risk Summary For Total Effect
 
 ```{r TERisk, warning=FALSE}
 riskSummary10 = TERiskSummaries.CMA(fit.TE = fit.y.TE, e.y=e.y10, e.y.name = "E.Y", sel=sel)
@@ -224,7 +224,7 @@ CDEriskSummary10 = CDERiskSummaries.CMA(fit.y = fit.y, e.y = e.y10, e.y.name = "
 ```{r}
 ggplot(CDEriskSummary10, aes(quantile, est, ymin = est - 1.96*sd, 
                              ymax = est + 1.96*sd, col = m)) + 
-  geom_pointrange(position = position_dodge(width = 0.75))
+  geom_pointrange(position = position_dodge(width = 0.75))+ theme(axis.text = element_text(size = 5))
 ```
 
 ```{r CDErisk90, warning=FALSE, message=FALSE, results='hide'} 
@@ -234,7 +234,7 @@ CDEriskSummary90 = CDERiskSummaries.CMA(fit.y = fit.y, e.y = e.y90, e.y.name = "
 ```{r}
 ggplot(CDEriskSummary90, aes(quantile, est, ymin = est - 1.96*sd, 
                              ymax = est + 1.96*sd, col = m)) + 
-  geom_pointrange(position = position_dodge(width = 0.75))
+  geom_pointrange(position = position_dodge(width = 0.75))+ theme(axis.text = element_text(size = 5))
 ```
 
 ## Single-predictor health risks
@@ -274,14 +274,6 @@ plotCDE10 <- ggplot(CDErisks.singvar10, aes(variable, est, ymin = est - 1.96*sd,
   coord_flip()
 
  
-CDErisks.singvar90 = CDESingVarRiskSummaries.CMA(BKMRfits = fit.y,
-                                                 e.y=e.y90, e.y.names="E.Y", m.name = "m",
-                                                 sel=sel)
-
-plotCDE90 <- ggplot(CDErisks.singvar90, aes(variable, est, ymin = est - 1.96*sd,
-                               ymax = est + 1.96*sd, col = q.fixed, linetype = m.fixed)) +
-  geom_pointrange(position = position_dodge(width = 0.75)) +
-  coord_flip()
-ggarrange(plotCDE10, plotCDE90, ncol=2, nrow =1)
+plotCDE10
 ```
 

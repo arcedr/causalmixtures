@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# causalbkmr:  a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)
+# causalmixtures:  a suite of functions for causal Bayesian Kernel Machine Regression (causal-BKMR)
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.com/zc2326/causalbkmr.svg?branch=master)](https://travis-ci.com/zc2326/causalbkmr)
@@ -22,22 +22,22 @@ knitr::opts_chunk$set(
 
 ## About the Package 
 
-The R package `causalbkmr` consists of three parts: `BKMR-CMA` for Bayesian Kernel Machine Regression-Causal Mediation Analysis, `MI-BKMR` for Multiple Imputation BKMR, and `g-BKMR` for Bayesian Kernel Machine Regression for time-varying exposures and time-varying confounders. 
+The R package `causalmixtures` consists of two parts: `BKMR-CMA` for Bayesian Kernel Machine Regression-Causal Mediation Analysis, and `MI-BKMR` for Multiple Imputation BKMR. 
  
-We welcome your feedback and questions (email zc2326@columbia.edu)!
+We welcome your feedback and questions (email ad3531@cumc.columbia.edu)!
 
 ## Installation 
 
-You can install the latest version of `causalbkmr` via: 
+You can install the latest version of `causalmixtures` via: 
 
 ``` r
-devtools::install_github("zc2326/causalbkmr")
+devtools::install_github("arcedr/causalmixtures")
 ```
 
-Load `causalbkmr`:
+Load `causalmixtured`:
 
 ```{r loadpackage}
-library(causalbkmr) 
+library(causalmixtured) 
 ```
 
 
@@ -53,7 +53,7 @@ We predict counterfactuals using the posterior predictive distributions of the m
 
 Cite the paper: [Bayesian kernel machine regression-causal mediation analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.9255?casa_token=lf0hlEtqtjgAAAAA%3AyPLEllmuJGIeEN9ZMIr7kT33RjXQmjiLbUq4JjqfI5dxlSvkdeVjzkEiOqG9Rbh70Frxe3ONzA2aql8)
 
-See the [Quick Start guide](https://zc2326.github.io/causalbkmr/articles/BKMRCMA_QuickStart.html) for `BKMR-CMA`. See the package [website](https://zc2326.github.io/causalbkmr/articles/BKMRCMA_method_overview.html) for an overview of statistical modeling approaches.
+See the [Quick Start guide](https://arcedr.github.io/causalmixtures/articles/BKMRCMA_QuickStart.html) for `BKMR-CMA`. See the package [website](https://arcedr.github.io/causalmixtures/articles/BKMRCMA_method_overview.html) for an overview of statistical modeling approaches.
 
  
 ### BKMR-MI
@@ -62,10 +62,5 @@ A command that is used for valid estimation of environmental mixture effects and
 
 The data `BKMRfits10` is simulated data with 10 BKMRfits, each is a BKMR fit using multiple imputed data with size $n = 500$.
 
-See the [Quick Start guide](https://zc2326.github.io/causalbkmr/articles/MI_BKMR.html) for `BKMR-CMA`. See the package [website](https://zc2326.github.io/causalbkmr/articles/BKMRMI_method_overview.html) for an overview of statistical modeling approaches.
+See the [Quick Start guide](https://arcedr.github.io/causalmixtures/articles/MI_BKMR.html) for `BKMR-CMA`. See the package [website](https://arcedr.github.io/causalmixtures/articles/BKMRMI_method_overview.html) for an overview of statistical modeling approaches.
 
-
-
-### g-BKMR
-
-Exposure to environmental chemicals has been shown to rewire development affecting later health status. Quantifying the joint effect of environmental mixtures over time is crucial to determine intervention timing. However, causal interpretation of longitudinal environmental mixture studies encounters challenges. There is no statistical approach that allows simultaneously for time-varying confounding, flexible modeling, and variable selection when examining the effect of multiple, correlated, and time-varying exposures. To address these gaps, we develop a causal inference method, g-BKMR, which enables us to estimate nonlinear, non-additive effects of time-varying exposures and time-varying confounders, while also allowing for variable selection.
