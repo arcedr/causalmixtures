@@ -18,7 +18,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 
 ```{r setup, results='hide', warning=FALSE, message=FALSE}
 library(bkmr)
-library(causalbkmr)
+library(causalmixtures)
 library(ggplot2) 
 library(magrittr)
 data("BKMRfits10")
@@ -152,6 +152,6 @@ Create the plot for the bivariate curves:
 
 ```{r plot}
 ggplot(bivar.levels.MI, aes(z1, est)) + geom_smooth(aes(col = quantile), stat = "identity") + 
-  facet_grid(variable2 ~ variable1) + ggtitle("h(expos1 | quantiles of expos2)") + xlab("expos1")
+  facet_grid(variable2 ~ variable1) + ggtitle("h(expos1 | quantiles of expos2)") + xlab("expos1") + theme(axis.text = element_text(size = 5))
 ```
  

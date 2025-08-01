@@ -4,3 +4,5 @@ dplyr
 magrittr
 bkmr
 mixtools
+causalmixtures
+ggpubr

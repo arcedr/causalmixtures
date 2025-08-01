@@ -19,7 +19,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 ```{r setup, results='hide', warning=FALSE, message=FALSE}
 library(bkmr)
 library(mixtools)
-library(causalbkmr)
+library(causalmixtures)
 library(ggplot2)
 library(ggpubr)
 ```
@@ -238,6 +238,7 @@ ggplot(CDEriskSummary90, aes(quantile, est, ymin = est - 1.96*sd,
 ```
 
 Since there's no effect modification, the two above figures are similar. 
+
 ## Single-predictor health risks
 
 ### Total Effect
@@ -249,7 +250,10 @@ Since there's no effect modification, the two above figures are similar.
 plot_singvar10 <- ggplot(risks.singvar10, aes(variable, est, ymin = est - 1.96*sd, ymax = est + 1.96*sd, col = q.fixed)) + theme(legend.position="none")+
   geom_pointrange(position = position_dodge(width = 0.5)) +
   coord_flip()
- 
+plot_singvar10
+```
+
+```{r warning=FALSE, message=FALSE, dpi=300}
 risks.singvar90 = SingVarRiskSummaries.CMA(BKMRfits = fit.y.TE, which.z = 1:3,
                                            e.y=e.y90, e.y.names="E.Y",
                                            sel=sel)
@@ -258,7 +262,7 @@ plot_singvar90 <- ggplot(risks.singvar90, aes(variable, est, ymin = est - 1.96*s
   geom_pointrange(position = position_dodge(width = 0.5)) +
   coord_flip()
 
-ggarrange(plot_singvar10, plot_singvar90, ncol=2, nrow=1)
+plot_singvar90
 ```
 
 Since there's no effect modification, the two above figures are similar. 
@@ -273,7 +277,10 @@ plotCDE10 <- ggplot(CDErisks.singvar10, aes(variable, est, ymin = est - 1.96*sd,
                             ymax = est + 1.96*sd, col = q.fixed, linetype = m.fixed)) +
   geom_pointrange(position = position_dodge(width = 0.5)) +theme(legend.position="none")+
   coord_flip() 
+plotCDE10
+```
 
+```{r CDERisksingvar90, warning=FALSE, message=FALSE, results='hide', dpi = 300} 
 CDErisks.singvar90 = CDESingVarRiskSummaries.CMA(BKMRfits = fit.y,
                                                  e.y=e.y90, e.y.names="E.Y", m.name = "m",
                                                  sel=sel) 
@@ -282,7 +289,7 @@ plotCDE90 <- ggplot(CDErisks.singvar90, aes(variable, est, ymin = est - 1.96*sd,
                                ymax = est + 1.96*sd, col = q.fixed, linetype = m.fixed)) +
   geom_pointrange(position = position_dodge(width = 0.5)) +
   coord_flip()
-ggarrange(plotCDE10, plotCDE90, ncol=2, nrow =1)
+plotCDE90
 ```
 
 Since there's no effect modification, the two above figures are similar. 

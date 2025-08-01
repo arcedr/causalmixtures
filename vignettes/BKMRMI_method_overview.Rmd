@@ -16,7 +16,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 ```
 
 ```{r setup}
-library(causalbkmr)
+library(causalmixtures)
 ```
 
 

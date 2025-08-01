@@ -8,3 +8,5 @@
 ^data-raw$
 ^\.travis\.yml$
 ^\.github$
+^doc$
+^Meta$

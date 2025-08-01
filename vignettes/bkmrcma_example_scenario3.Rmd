@@ -18,7 +18,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 ```{r setup, results='hide', warning=FALSE, message=FALSE}
 library(bkmr)
 library(mixtools)
-library(causalbkmr)
+library(causalmixtures)
 library(ggplot2)
 library(ggpubr)
 ```

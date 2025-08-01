@@ -6,7 +6,7 @@
 
 ## About the Package
 
-The R package `causalmixtures` consists of three parts: `BKMR-CMA` for
+The R package `causalmixtures` consists of two parts: `BKMR-CMA` for
 Bayesian Kernel Machine Regression-Causal Mediation Analysis, and `MI-BKMR`
 for Multiple Imputation BKMR.
 
