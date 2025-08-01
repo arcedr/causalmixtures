@@ -50,9 +50,9 @@ Cite the paper: [Bayesian kernel machine regression-causal mediation
 analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.9255?casa_token=lf0hlEtqtjgAAAAA%3AyPLEllmuJGIeEN9ZMIr7kT33RjXQmjiLbUq4JjqfI5dxlSvkdeVjzkEiOqG9Rbh70Frxe3ONzA2aql8)
 
 See the [Quick Start
-guide](https://zc2326.github.io/causalbkmr/articles/BKMRCMA_QuickStart.html)
+guide](https://arcedr.github.io/causalmixtures/articles/BKMRCMA_QuickStart.html)
 for `BKMR-CMA`. See the package
-[website](https://zc2326.github.io/causalbkmr/articles/BKMRCMA_method_overview.html)
+[website](https://arcedr.github.io/causalmixtures/articles/BKMRCMA_method_overview.html)
 for an overview of statistical modeling approaches.
 
 ### BKMR-MI
@@ -71,8 +71,8 @@ The data `BKMRfits10` is simulated data with 10 BKMRfits, each is a BKMR
 fit using multiple imputed data with size *n* = 500.
 
 See the [Quick Start
-guide](https://zc2326.github.io/causalbkmr/articles/MI_BKMR.html) for
+guide](https://arcedr.github.io/causalmixtures/articles/MI_BKMR.html) for
 `BKMR-CMA`. See the package
-[website](https://zc2326.github.io/causalbkmr/articles/BKMRMI_method_overview.html)
+[website](https://arcedr.github.io/causalmixtures/articles/BKMRMI_method_overview.html)
 for an overview of statistical modeling approaches.
 
